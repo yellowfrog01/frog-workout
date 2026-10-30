@@ -1,0 +1,14 @@
+# 빌드 산출물
+WorkoutLog/build/
+WorkoutLog/build-*/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+
+# 기기·네트워크 식별값 (공개 저장소에 올리지 않음)
+deploy.env
+.remote-bridge.cache
+
+# 잡파일
+WorkoutLog/-
