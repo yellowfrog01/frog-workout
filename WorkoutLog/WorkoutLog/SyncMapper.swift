@@ -113,6 +113,13 @@ enum SyncMapper {
         guard let id = uuid(r["id"]), let d = date(r["date"]) else { return nil }
         let s = Session(date: d)
         s.syncID = id
+        applySession(r, to: s)
+        return s
+    }
+
+    /// 서버 행 값을 기존 Session 에 그대로 덮어쓴다 (SwiftData 객체 동일성 유지용).
+    static func applySession(_ r: [String: Any], to s: Session) {
+        if let d = date(r["date"]) { s.date = d }
         s.kindRaw = str(r["kind"]) ?? WorkoutKind.strength.rawValue
         s.conditionRaw = str(r["condition"]) ?? Condition.normal.rawValue
         s.bodyPartRaw = str(r["body_part"])
@@ -126,15 +133,15 @@ enum SyncMapper {
         s.interval = decode(r["interval"]) as IntervalEntry?
         if let detail = r["interval_detail"], !(detail is NSNull), JSONSerialization.isValidJSONObject(detail) {
             s.intervalDetailData = try? JSONSerialization.data(withJSONObject: detail)
+        } else {
+            s.intervalDetailData = nil
         }
         s.healthKitUUID = str(r["health_kit_uuid"])
-        if let env = r["telemetry"] as? [String: Any] {
-            s.telemetryData = decode(env["telemetry"]) as Telemetry?
-            s.routeData = decode(env["route"]) as [RoutePoint]?
-            s.hrData = decode(env["hr"]) as [HRPoint]?
-            s.watchSessionID = str(env["watchSessionID"])
-        }
-        return s
+        let env = r["telemetry"] as? [String: Any]
+        s.telemetryData = decode(env?["telemetry"]) as Telemetry?
+        s.routeData = decode(env?["route"]) as [RoutePoint]?
+        s.hrData = decode(env?["hr"]) as [HRPoint]?
+        s.watchSessionID = str(env?["watchSessionID"])
     }
 
     // MARK: BodyRecord
@@ -160,6 +167,16 @@ enum SyncMapper {
         guard let id = uuid(r["id"]), let d = date(r["date"]), let data = r["data"] as? [String: Any] else { return nil }
         let b = BodyRecord(date: d, source: str(data["source"]) ?? "", key: str(data["key"]) ?? "")
         b.syncID = id
+        applyBody(r, to: b)
+        return b
+    }
+
+    /// 서버 행 값을 기존 BodyRecord 에 그대로 덮어쓴다.
+    static func applyBody(_ r: [String: Any], to b: BodyRecord) {
+        guard let data = r["data"] as? [String: Any] else { return }
+        if let d = date(r["date"]) { b.date = d }
+        b.source = str(data["source"]) ?? ""
+        b.key = str(data["key"]) ?? ""
         b.deviceCode = str(data["deviceCode"])
         b.weight = dbl(data["weight"]) ?? 0
         b.skeletalMuscle = dbl(data["skeletalMuscle"])
@@ -174,7 +191,6 @@ enum SyncMapper {
         b.protein = dbl(data["protein"])
         b.mineral = dbl(data["mineral"])
         b.smi = dbl(data["smi"])
-        return b
     }
 
     // MARK: PlannedWorkout
@@ -202,8 +218,17 @@ enum SyncMapper {
         guard let id = uuid(r["id"]), let d = date(r["date"]), let data = r["data"] as? [String: Any] else { return nil }
         let kind = str(data["kind"]).flatMap(WorkoutKind.init(rawValue:)) ?? .strength
         let p = PlannedWorkout(date: d, kind: kind, title: str(data["title"]) ?? "")
-        p.date = d    // init 이 자정으로 맞추므로 서버 값을 그대로 복원
         p.syncID = id
+        applyPlanned(r, to: p)
+        return p
+    }
+
+    /// 서버 행 값을 기존 PlannedWorkout 에 그대로 덮어쓴다.
+    static func applyPlanned(_ r: [String: Any], to p: PlannedWorkout) {
+        guard let data = r["data"] as? [String: Any] else { return }
+        if let d = date(r["date"]) { p.date = d }    // init 이 자정으로 맞추므로 서버 값을 그대로 복원
+        p.kindRaw = str(data["kind"]) ?? WorkoutKind.strength.rawValue
+        p.title = str(data["title"]) ?? ""
         p.programID = str(data["programID"])
         p.programTitle = str(data["programTitle"])
         p.week = int(data["week"]) ?? 1
@@ -215,6 +240,5 @@ enum SyncMapper {
         p.note = str(data["note"]) ?? ""
         p.startedAt = date(data["startedAt"])
         p.createdAt = date(data["createdAt"]) ?? p.createdAt
-        return p
     }
 }

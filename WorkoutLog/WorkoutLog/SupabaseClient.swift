@@ -270,4 +270,29 @@ final class SupabaseClient {
         }
         return out
     }
+
+    /// 풀용 변경분 조회. `synced_at > since` (deleted 포함), 오래된 것부터. Range 헤더로 1000행씩.
+    /// synced_at = 서버에 쓰인 시각(트리거). 오프라인 변경이 과거 updated_at 으로 늦게 올라와도 놓치지 않는다.
+    /// since 가 nil 이면 전체. `synced_at` 문자열은 서버 값 그대로 돌려준다.
+    func fetchChanges(table: String, since: String?) async throws -> [[String: Any]] {
+        var out: [[String: Any]] = []
+        var from = 0
+        var query = "select=*&order=synced_at.asc,id.asc"
+        if let since {
+            // '+' 가 공백으로 해석되지 않게 인코딩
+            let enc = since.addingPercentEncoding(withAllowedCharacters: CharacterSet(charactersIn: "0123456789-:.TZ")) ?? since
+            query = "select=*&synced_at=gt.\(enc)&order=synced_at.asc,id.asc"
+        }
+        while true {
+            let data = try await rest(method: "GET", table: table, query: query,
+                                      headers: ["Range-Unit": "items", "Range": "\(from)-\(from + 999)"])
+            guard let page = (try? JSONSerialization.jsonObject(with: data)) as? [[String: Any]] else {
+                throw SupabaseError.invalidResponse
+            }
+            out += page
+            if page.count < 1000 { break }
+            from += 1000
+        }
+        return out
+    }
 }

@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		002AE9D4F4537FBF0AAC2927 /* LiftMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215AF5D9B0F4423268404F6 /* LiftMemo.swift */; };
+		01AE1ECC95905D5E3B85F89E /* Telemetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC3D5F2914354EF98A71186 /* Telemetry.swift */; };
+		01F54F029F73D831C4505F88 /* Vitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2FC52B75E061E428542656 /* Vitals.swift */; };
+		09E6C3E6920BE5751C213743 /* LiftPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AFD2D7FD102D50984476E /* LiftPhase.swift */; };
+		140416217D2FF07DD9348567 /* MacStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C79321D8DD3383F5117206 /* MacStatus.swift */; };
+		29257DEC81D7FFEE9C1A2F01 /* MacEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82140C2748382E6A798EB1 /* MacEditing.swift */; };
+		2A9ED2CB2122A288D0123DD4 /* ProgramData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649810E53ED76A1CCA05AC2A /* ProgramData.swift */; };
+		2D74076D5F65F9630FF4F20E /* ActivityViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55283E8C567E5B9B7D9A0288 /* ActivityViews.swift */; };
+		2EEE61C04603E80458683367 /* SyncSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892347B00F58ABBA3997F66 /* SyncSettingsView.swift */; };
+		49026E9C1C645340B8F9F71D /* LiftTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36174F93B78B46445B06C5E6 /* LiftTiming.swift */; };
+		634663E52A74B53C73C42277 /* MacCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB509E5AFF46CC2CE1BB40 /* MacCalendar.swift */; };
+		66A532A14D7A4E73DAB33456 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D709BC4A017F417B130EFBC /* Tracking.swift */; };
+		79153D9CAF4F3F8595C75ADB /* IntervalDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4672068739A4297728ED165 /* IntervalDetail.swift */; };
+		80898458A0D182F9538ADFF9 /* MacBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B0CDA5074CC1671B5A8039 /* MacBody.swift */; };
+		85DC35D7D98AF7F681D19496 /* MacHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE9732D41238EDC937493 /* MacHelpers.swift */; };
+		87F0C7201E9C25D8CD4AFBC3 /* MacRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = E858DFC356896C37E4F52701 /* MacRecords.swift */; };
+		9E0521D48BE8AF3FBD693D6E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E3F374C786164946E51446 /* Theme.swift */; };
+		A456694E08F3E6E7B99371F5 /* PlannedWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF58720218F36BBD138DBFF /* PlannedWorkout.swift */; };
+		A95214B8CBA61E180899F01F /* MacNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19112B02DA9DE84C102071D2 /* MacNav.swift */; };
+		B2ABE042DE76EB5370DFA77D /* StatusEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066676F197D85086451AAF8A /* StatusEngine.swift */; };
+		B823DEA075AF1A61861866FC /* SupabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674036D2D6B0DF50559C105E /* SupabaseClient.swift */; };
+		BE70AAD57F82DB063FA7728D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C743440ED8D3E85D014EDCF9 /* Models.swift */; };
+		C2FE6B2239C5C94866D162D1 /* SyncMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E0AAC4D22C372A9A1B0DD /* SyncMapper.swift */; };
+		C610B7CB8A9A1861D056302A /* BodyRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC58C2B3117625D3AC85E4E /* BodyRecord.swift */; };
+		CC5D8A2C14D58927AB1C6857 /* Supabase.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96686880324104CD0E971AE3 /* Supabase.plist */; };
+		D28E4A5269087AF228FB6F96 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B238D22E1EA1A7F2597D5FA /* Program.swift */; };
+		DC971C35CDB0F28150213660 /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AAD515039F9D1F9FBDA24E /* SyncService.swift */; };
+		DE3931C13BDC40774B9CA945 /* StrengthHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1EA69F9361B47A9A067EE1 /* StrengthHistory.swift */; };
+		FE019AA70A490C6ABFBDFA27 /* WorkoutLogMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A05C10FDEF67E3D25EA899 /* WorkoutLogMacApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		066676F197D85086451AAF8A /* StatusEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEngine.swift; sourceTree = "<group>"; };
+		112AFD2D7FD102D50984476E /* LiftPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftPhase.swift; sourceTree = "<group>"; };
+		1215AF5D9B0F4423268404F6 /* LiftMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftMemo.swift; sourceTree = "<group>"; };
+		19112B02DA9DE84C102071D2 /* MacNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacNav.swift; sourceTree = "<group>"; };
+		1F1EA69F9361B47A9A067EE1 /* StrengthHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrengthHistory.swift; sourceTree = "<group>"; };
+		2892347B00F58ABBA3997F66 /* SyncSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncSettingsView.swift; sourceTree = "<group>"; };
+		36174F93B78B46445B06C5E6 /* LiftTiming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftTiming.swift; sourceTree = "<group>"; };
+		47B0CDA5074CC1671B5A8039 /* MacBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacBody.swift; sourceTree = "<group>"; };
+		4F2FC52B75E061E428542656 /* Vitals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vitals.swift; sourceTree = "<group>"; };
+		55283E8C567E5B9B7D9A0288 /* ActivityViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViews.swift; sourceTree = "<group>"; };
+		61CC2D0E833AD4CA40C71E0D /* WorkoutLogMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutLogMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		635BE9732D41238EDC937493 /* MacHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacHelpers.swift; sourceTree = "<group>"; };
+		649810E53ED76A1CCA05AC2A /* ProgramData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramData.swift; sourceTree = "<group>"; };
+		65AB509E5AFF46CC2CE1BB40 /* MacCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacCalendar.swift; sourceTree = "<group>"; };
+		674036D2D6B0DF50559C105E /* SupabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseClient.swift; sourceTree = "<group>"; };
+		6B238D22E1EA1A7F2597D5FA /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		7A82140C2748382E6A798EB1 /* MacEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacEditing.swift; sourceTree = "<group>"; };
+		7D709BC4A017F417B130EFBC /* Tracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
+		96686880324104CD0E971AE3 /* Supabase.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Supabase.plist; sourceTree = "<group>"; };
+		97A05C10FDEF67E3D25EA899 /* WorkoutLogMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutLogMacApp.swift; sourceTree = "<group>"; };
+		9D4E0AAC4D22C372A9A1B0DD /* SyncMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncMapper.swift; sourceTree = "<group>"; };
+		ABF58720218F36BBD138DBFF /* PlannedWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedWorkout.swift; sourceTree = "<group>"; };
+		B1AAD515039F9D1F9FBDA24E /* SyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncService.swift; sourceTree = "<group>"; };
+		B1C79321D8DD3383F5117206 /* MacStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacStatus.swift; sourceTree = "<group>"; };
+		B4672068739A4297728ED165 /* IntervalDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalDetail.swift; sourceTree = "<group>"; };
+		C743440ED8D3E85D014EDCF9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		CDC58C2B3117625D3AC85E4E /* BodyRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyRecord.swift; sourceTree = "<group>"; };
+		E858DFC356896C37E4F52701 /* MacRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacRecords.swift; sourceTree = "<group>"; };
+		ECC3D5F2914354EF98A71186 /* Telemetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telemetry.swift; sourceTree = "<group>"; };
+		F3E3F374C786164946E51446 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		076533E8578FC7199B99FF6A /* WorkoutLog */ = {
+			isa = PBXGroup;
+			children = (
+				55283E8C567E5B9B7D9A0288 /* ActivityViews.swift */,
+				CDC58C2B3117625D3AC85E4E /* BodyRecord.swift */,
+				B4672068739A4297728ED165 /* IntervalDetail.swift */,
+				1215AF5D9B0F4423268404F6 /* LiftMemo.swift */,
+				112AFD2D7FD102D50984476E /* LiftPhase.swift */,
+				36174F93B78B46445B06C5E6 /* LiftTiming.swift */,
+				C743440ED8D3E85D014EDCF9 /* Models.swift */,
+				ABF58720218F36BBD138DBFF /* PlannedWorkout.swift */,
+				6B238D22E1EA1A7F2597D5FA /* Program.swift */,
+				649810E53ED76A1CCA05AC2A /* ProgramData.swift */,
+				066676F197D85086451AAF8A /* StatusEngine.swift */,
+				1F1EA69F9361B47A9A067EE1 /* StrengthHistory.swift */,
+				96686880324104CD0E971AE3 /* Supabase.plist */,
+				674036D2D6B0DF50559C105E /* SupabaseClient.swift */,
+				9D4E0AAC4D22C372A9A1B0DD /* SyncMapper.swift */,
+				B1AAD515039F9D1F9FBDA24E /* SyncService.swift */,
+				2892347B00F58ABBA3997F66 /* SyncSettingsView.swift */,
+				ECC3D5F2914354EF98A71186 /* Telemetry.swift */,
+				F3E3F374C786164946E51446 /* Theme.swift */,
+				7D709BC4A017F417B130EFBC /* Tracking.swift */,
+				4F2FC52B75E061E428542656 /* Vitals.swift */,
+			);
+			name = WorkoutLog;
+			path = ../WorkoutLog/WorkoutLog;
+			sourceTree = "<group>";
+		};
+		859293800DCF801D5833FBDA = {
+			isa = PBXGroup;
+			children = (
+				8719FC75524CD0899C41241F /* Sources */,
+				076533E8578FC7199B99FF6A /* WorkoutLog */,
+				88655459D3BB8C6E24F09C4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8719FC75524CD0899C41241F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				47B0CDA5074CC1671B5A8039 /* MacBody.swift */,
+				65AB509E5AFF46CC2CE1BB40 /* MacCalendar.swift */,
+				7A82140C2748382E6A798EB1 /* MacEditing.swift */,
+				635BE9732D41238EDC937493 /* MacHelpers.swift */,
+				19112B02DA9DE84C102071D2 /* MacNav.swift */,
+				E858DFC356896C37E4F52701 /* MacRecords.swift */,
+				B1C79321D8DD3383F5117206 /* MacStatus.swift */,
+				97A05C10FDEF67E3D25EA899 /* WorkoutLogMacApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		88655459D3BB8C6E24F09C4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61CC2D0E833AD4CA40C71E0D /* WorkoutLogMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63578F523F12F49D1958628A /* WorkoutLogMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6702393A312AD835A5448687 /* Build configuration list for PBXNativeTarget "WorkoutLogMac" */;
+			buildPhases = (
+				A341288BBAC6D490F8FAE854 /* Sources */,
+				F2F78756A75E2B2D480224B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorkoutLogMac;
+			packageProductDependencies = (
+			);
+			productName = WorkoutLogMac;
+			productReference = 61CC2D0E833AD4CA40C71E0D /* WorkoutLogMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51E0B602A7B677CF4244E27D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					63578F523F12F49D1958628A = {
+						DevelopmentTeam = G93P856529;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 08E3F0DA52896E809327B47F /* Build configuration list for PBXProject "WorkoutLogMac" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 859293800DCF801D5833FBDA;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 88655459D3BB8C6E24F09C4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63578F523F12F49D1958628A /* WorkoutLogMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2F78756A75E2B2D480224B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5D8A2C14D58927AB1C6857 /* Supabase.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A341288BBAC6D490F8FAE854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D74076D5F65F9630FF4F20E /* ActivityViews.swift in Sources */,
+				C610B7CB8A9A1861D056302A /* BodyRecord.swift in Sources */,
+				79153D9CAF4F3F8595C75ADB /* IntervalDetail.swift in Sources */,
+				002AE9D4F4537FBF0AAC2927 /* LiftMemo.swift in Sources */,
+				09E6C3E6920BE5751C213743 /* LiftPhase.swift in Sources */,
+				49026E9C1C645340B8F9F71D /* LiftTiming.swift in Sources */,
+				80898458A0D182F9538ADFF9 /* MacBody.swift in Sources */,
+				634663E52A74B53C73C42277 /* MacCalendar.swift in Sources */,
+				29257DEC81D7FFEE9C1A2F01 /* MacEditing.swift in Sources */,
+				85DC35D7D98AF7F681D19496 /* MacHelpers.swift in Sources */,
+				A95214B8CBA61E180899F01F /* MacNav.swift in Sources */,
+				87F0C7201E9C25D8CD4AFBC3 /* MacRecords.swift in Sources */,
+				140416217D2FF07DD9348567 /* MacStatus.swift in Sources */,
+				BE70AAD57F82DB063FA7728D /* Models.swift in Sources */,
+				A456694E08F3E6E7B99371F5 /* PlannedWorkout.swift in Sources */,
+				D28E4A5269087AF228FB6F96 /* Program.swift in Sources */,
+				2A9ED2CB2122A288D0123DD4 /* ProgramData.swift in Sources */,
+				B2ABE042DE76EB5370DFA77D /* StatusEngine.swift in Sources */,
+				DE3931C13BDC40774B9CA945 /* StrengthHistory.swift in Sources */,
+				B823DEA075AF1A61861866FC /* SupabaseClient.swift in Sources */,
+				C2FE6B2239C5C94866D162D1 /* SyncMapper.swift in Sources */,
+				DC971C35CDB0F28150213660 /* SyncService.swift in Sources */,
+				2EEE61C04603E80458683367 /* SyncSettingsView.swift in Sources */,
+				01AE1ECC95905D5E3B85F89E /* Telemetry.swift in Sources */,
+				9E0521D48BE8AF3FBD693D6E /* Theme.swift in Sources */,
+				66A532A14D7A4E73DAB33456 /* Tracking.swift in Sources */,
+				01F54F029F73D831C4505F88 /* Vitals.swift in Sources */,
+				FE019AA70A490C6ABFBDFA27 /* WorkoutLogMacApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		423CD2A2830EBEB9C90261C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = WorkoutLogMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G93P856529;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "운동기록";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gimgeon.WorkoutLogMac;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		574499295662AE9F96D6F9C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		5EC866E3AFB50F545A078F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		63F4975DA3DB82330DBAB920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = WorkoutLogMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G93P856529;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "운동기록";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gimgeon.WorkoutLogMac;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		08E3F0DA52896E809327B47F /* Build configuration list for PBXProject "WorkoutLogMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EC866E3AFB50F545A078F0B /* Debug */,
+				574499295662AE9F96D6F9C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6702393A312AD835A5448687 /* Build configuration list for PBXNativeTarget "WorkoutLogMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63F4975DA3DB82330DBAB920 /* Debug */,
+				423CD2A2830EBEB9C90261C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51E0B602A7B677CF4244E27D /* Project object */;
+}

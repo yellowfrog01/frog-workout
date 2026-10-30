@@ -82,6 +82,7 @@ enum VitalKind: String, CaseIterable, Identifiable {
     }
 }
 
+#if os(iOS)
 enum VitalsImporter {
     /// 전 지표를 HealthKit 에서 읽는다. done(가져온 건수, 발견된 종류)
     static func importAll(existing: Set<String>,
@@ -121,3 +122,4 @@ enum VitalsImporter {
         }
     }
 }
+#endif

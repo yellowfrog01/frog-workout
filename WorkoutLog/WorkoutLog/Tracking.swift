@@ -18,6 +18,7 @@ struct HRPoint: Codable, Hashable, Identifiable {
     var id: Double { t }
 }
 
+#if os(iOS)
 // MARK: - GPS 경로 추적 (아이폰 단독. 애플워치 불필요)
 
 @Observable
@@ -165,3 +166,4 @@ final class HeartRateMonitor {
         query = nil
     }
 }
+#endif

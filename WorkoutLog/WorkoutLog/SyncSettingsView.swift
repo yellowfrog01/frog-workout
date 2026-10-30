@@ -1,8 +1,10 @@
 import SwiftUI
 
-/// 동기화 설정 시트: 상태, 로그인, 지금 동기화, 로그아웃
+/// 동기화 현황 시트: 상태(자동 동기화), 로그인, 로그아웃. 동기화는 자동이라 수동 버튼은 두지 않는다.
 struct SyncSettingsView: View {
     @Environment(\.dismiss) private var dismiss
+    /// 시트로 띄울 때만 닫기 버튼 (맥 사이드바에 넣을 때는 false)
+    var showsClose = true
     private var sync: SyncService { .shared }
 
     @State private var email = ""
@@ -29,17 +31,29 @@ struct SyncSettingsView: View {
             }
             .background(Palette.bg)
             .navigationTitle("동기화")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(Palette.bg, for: .navigationBar)
+            #endif
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("닫기") { dismiss() }
-                        .font(.rounded(15, .semibold))
+                if showsClose {
+                    ToolbarItem(placement: toolbarPlacement) {
+                        Button("닫기") { dismiss() }
+                            .font(.rounded(15, .semibold))
+                    }
                 }
             }
         }
         .preferredColorScheme(.dark)
         .tint(Palette.strength)
+    }
+
+    private var toolbarPlacement: ToolbarItemPlacement {
+        #if os(iOS)
+        .topBarTrailing
+        #else
+        .confirmationAction
+        #endif
     }
 
     // MARK: 상태
@@ -48,7 +62,8 @@ struct SyncSettingsView: View {
         CardBox {
             SectionLabel(text: "상태")
             row("계정", sync.email ?? "로그인 안 됨")
-            row("마지막 동기화", sync.lastSyncAt.map(Self.format) ?? "없음")
+            row("마지막 업로드", sync.lastUploadAt.map(Self.format) ?? "없음")
+            row("마지막 받기", sync.lastPullAt.map(Self.format) ?? "없음")
             row("대기", "\(sync.pendingCount)건")
             row("네트워크", sync.isOnline ? "연결됨" : "오프라인")
             if let e = sync.lastError {
@@ -74,13 +89,17 @@ struct SyncSettingsView: View {
         CardBox {
             SectionLabel(text: "로그인")
             TextField("이메일", text: $email)
+                #if os(iOS)
                 .textContentType(.emailAddress)
                 .keyboardType(.emailAddress)
                 .textInputAutocapitalization(.never)
+                #endif
                 .autocorrectionDisabled()
                 .field()
             SecureField("비밀번호", text: $password)
+                #if os(iOS)
                 .textContentType(.password)
+                #endif
                 .field()
             if let m = message {
                 Text(m)
@@ -103,13 +122,12 @@ struct SyncSettingsView: View {
 
     private var actions: some View {
         VStack(spacing: 10) {
-            Button { Task { await syncNow() } } label: {
+            if sync.isSyncing {
                 HStack(spacing: 8) {
-                    if sync.isSyncing || busy { ProgressView().tint(.black) }
-                    label("지금 동기화", filled: true)
+                    ProgressView()
+                    Text("동기화 중…").font(.rounded(13, .semibold)).foregroundStyle(Palette.dim)
                 }
             }
-            .disabled(sync.isSyncing || busy)
             Button { sync.signOut() } label: {
                 label("로그아웃", filled: false)
             }
@@ -154,12 +172,6 @@ struct SyncSettingsView: View {
         } catch {
             message = error.localizedDescription
         }
-    }
-
-    private func syncNow() async {
-        busy = true
-        await sync.syncNow()
-        busy = false
     }
 
     private static func format(_ d: Date) -> String {
