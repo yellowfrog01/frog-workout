@@ -19,6 +19,7 @@
 		49026E9C1C645340B8F9F71D /* LiftTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36174F93B78B46445B06C5E6 /* LiftTiming.swift */; };
 		634663E52A74B53C73C42277 /* MacCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB509E5AFF46CC2CE1BB40 /* MacCalendar.swift */; };
 		66A532A14D7A4E73DAB33456 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D709BC4A017F417B130EFBC /* Tracking.swift */; };
+		70888F003AC412F6107CD091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B8A917BFE7464E3B9502A /* Assets.xcassets */; };
 		79153D9CAF4F3F8595C75ADB /* IntervalDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4672068739A4297728ED165 /* IntervalDetail.swift */; };
 		80898458A0D182F9538ADFF9 /* MacBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B0CDA5074CC1671B5A8039 /* MacBody.swift */; };
 		85DC35D7D98AF7F681D19496 /* MacHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE9732D41238EDC937493 /* MacHelpers.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		066676F197D85086451AAF8A /* StatusEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEngine.swift; sourceTree = "<group>"; };
+		0D6B8A917BFE7464E3B9502A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		112AFD2D7FD102D50984476E /* LiftPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftPhase.swift; sourceTree = "<group>"; };
 		1215AF5D9B0F4423268404F6 /* LiftMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftMemo.swift; sourceTree = "<group>"; };
 		19112B02DA9DE84C102071D2 /* MacNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacNav.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		859293800DCF801D5833FBDA = {
 			isa = PBXGroup;
 			children = (
+				B7A8D9CD3713C1C41D2D7F78 /* Resources */,
 				8719FC75524CD0899C41241F /* Sources */,
 				076533E8578FC7199B99FF6A /* WorkoutLog */,
 				88655459D3BB8C6E24F09C4D /* Products */,
@@ -131,6 +134,14 @@
 				61CC2D0E833AD4CA40C71E0D /* WorkoutLogMac.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B7A8D9CD3713C1C41D2D7F78 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D6B8A917BFE7464E3B9502A /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70888F003AC412F6107CD091 /* Assets.xcassets in Resources */,
 				CC5D8A2C14D58927AB1C6857 /* Supabase.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,14 +253,15 @@
 		423CD2A2830EBEB9C90261C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WorkoutLogMac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = G93P856529;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "운동기록";
+				INFOPLIST_KEY_CFBundleDisplayName = "Frog Workout";
+				INFOPLIST_KEY_CFBundleName = "Frog Workout";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -386,14 +399,15 @@
 		63F4975DA3DB82330DBAB920 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WorkoutLogMac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = G93P856529;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "운동기록";
+				INFOPLIST_KEY_CFBundleDisplayName = "Frog Workout";
+				INFOPLIST_KEY_CFBundleName = "Frog Workout";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (

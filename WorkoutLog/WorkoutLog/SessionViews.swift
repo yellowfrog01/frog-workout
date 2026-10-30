@@ -826,7 +826,7 @@ struct CardioSessionView: View {
     private var hint: String {
         if watch.isLive { return "워치와 동기화 중 · 실시간 수신" }
         if watch.running && watch.pendingStart {
-            return "워치에서 운동로그 앱을 열면 자동으로 시작됩니다"
+            return "워치에서 Frog Workout 앱을 열면 자동으로 시작됩니다"
         }
         if watch.running { return "워치 세션 연결됨 · 심박 대기 중" }
         if !watch.paired { return "애플워치가 페어링되어 있지 않습니다" }

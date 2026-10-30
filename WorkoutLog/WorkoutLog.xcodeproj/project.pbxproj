@@ -342,7 +342,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_CFBundleDisplayName = "운동로그";
+				INFOPLIST_KEY_CFBundleDisplayName = "Frog Workout";
 				CODE_SIGN_ENTITLEMENTS = WorkoutLog/WorkoutLog.entitlements;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "운동 중 심박수를 읽어 실시간으로 보여줍니다.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Saves workouts to Health.";
@@ -369,7 +369,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_CFBundleDisplayName = "운동로그";
+				INFOPLIST_KEY_CFBundleDisplayName = "Frog Workout";
 				CODE_SIGN_ENTITLEMENTS = WorkoutLog/WorkoutLog.entitlements;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "운동 중 심박수를 읽어 실시간으로 보여줍니다.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Saves workouts to Health.";
@@ -396,7 +396,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G93P856529;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "운동로그";
+				INFOPLIST_KEY_CFBundleDisplayName = "Frog Workout";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Reads heart rate during workouts.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Saves workouts to Health.";
 				INFOPLIST_KEY_WKApplication = YES;
@@ -427,7 +427,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G93P856529;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "운동로그";
+				INFOPLIST_KEY_CFBundleDisplayName = "Frog Workout";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Reads heart rate during workouts.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Saves workouts to Health.";
 				INFOPLIST_KEY_WKApplication = YES;
@@ -455,7 +455,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G93P856529;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_KEY_CFBundleDisplayName = "\uc6b4\ub3d9\ub85c\uadf8";
+				INFOPLIST_KEY_CFBundleDisplayName = "Frog Workout";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -481,7 +481,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G93P856529;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_KEY_CFBundleDisplayName = "\uc6b4\ub3d9\ub85c\uadf8";
+				INFOPLIST_KEY_CFBundleDisplayName = "Frog Workout";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;

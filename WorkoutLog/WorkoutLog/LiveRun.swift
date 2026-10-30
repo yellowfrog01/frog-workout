@@ -57,7 +57,7 @@ enum LiveRun {
             for a in stale { Task { await a.end(nil, dismissalPolicy: .immediate) } }
         }
         guard enabled else {
-            st.note = "설정 → 운동로그 → 실시간 액티비티를 켜주세요"
+            st.note = "설정 → Frog Workout → 실시간 액티비티를 켜주세요"
             return
         }
         let attrs = RunActivityAttributes(mode: mode.label)

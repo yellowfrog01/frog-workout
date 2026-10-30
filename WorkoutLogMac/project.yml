@@ -36,6 +36,7 @@ targets:
       - path: ../WorkoutLog/WorkoutLog/ActivityViews.swift
       - path: ../WorkoutLog/WorkoutLog/Supabase.plist
         buildPhase: resources
+      - path: Resources/Assets.xcassets
     entitlements:
       path: WorkoutLogMac.entitlements
       properties:
@@ -47,8 +48,9 @@ targets:
         DEVELOPMENT_TEAM: G93P856529
         CODE_SIGN_STYLE: Automatic
         GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: 운동기록
+        INFOPLIST_KEY_CFBundleDisplayName: Frog Workout
+        INFOPLIST_KEY_CFBundleName: Frog Workout
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.healthcare-fitness
         INFOPLIST_KEY_NSHumanReadableCopyright: ""
         ENABLE_HARDENED_RUNTIME: YES
-        ASSETCATALOG_COMPILER_APPICON_NAME: ""
