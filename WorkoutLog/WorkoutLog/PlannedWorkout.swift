@@ -24,6 +24,8 @@ final class PlannedWorkout {
     /// 이 계획으로 운동을 시작한 시각. 채워지면 예정 목록에서 빠진다.
     var startedAt: Date?
     var createdAt: Date = Date()
+    /// Supabase 행 id. 첫 동기화 때 발급 (SyncService)
+    var syncID: UUID?
 
     init(date: Date,
          kind: WorkoutKind,

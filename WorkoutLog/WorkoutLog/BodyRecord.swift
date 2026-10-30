@@ -24,6 +24,8 @@ final class BodyRecord {
 
     /// 중복 방지용 (측정 시각 문자열)
     var key: String = ""
+    /// Supabase 행 id. 첫 동기화 때 발급 (SyncService)
+    var syncID: UUID?
 
     init(date: Date, source: String, key: String) {
         self.date = date

@@ -283,6 +283,8 @@ final class Session {
     var intervalDetailData: Data?
     /// 기타 운동 이름 (배드민턴, 등산 …). kind == .activity 일 때만 쓴다.
     var activityName: String?
+    /// Supabase 행 id. 첫 동기화 때 발급 (SyncService)
+    var syncID: UUID?
 
     init(date: Date = .now,
          kind: WorkoutKind = .strength,

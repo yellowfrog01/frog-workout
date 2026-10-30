@@ -15,6 +15,8 @@ struct MainView: View {
     @State private var importing = false
     @State private var showCalendar = false
     @State private var showStore = false
+    @State private var showSync = false
+    private var sync: SyncService { .shared }
     @State private var active: ActiveWorkout?
     /// 근력 초안이 있는데 새로 시작하려 할 때 고르게 한다
     @State private var pendingStrength: ActiveWorkout?
@@ -85,6 +87,13 @@ struct MainView: View {
                     }
                 }
                 ToolbarItem(placement: .topBarTrailing) {
+                    Button { showSync = true } label: {
+                        Image(systemName: sync.statusSymbol)
+                            .font(.system(size: 16, weight: .bold))
+                            .foregroundStyle(Palette.strength)
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
                     Button { showStore = true } label: {
                         Image(systemName: "bag.fill")
                             .font(.system(size: 15, weight: .bold))
@@ -107,6 +116,7 @@ struct MainView: View {
         .sheet(isPresented: $importing) { ImportSheet() }
         .sheet(isPresented: $showCalendar) { CalendarSheet() }
         .sheet(isPresented: $showStore) { ProgramStoreView() }
+        .sheet(isPresented: $showSync) { SyncSettingsView() }
         .confirmationDialog("운동 종류", isPresented: $picking, titleVisibility: .visible) {
             Button("근력") { askCondition(ActiveWorkout(kind: .strength, mode: nil)) }
             Button("유산소") { pickingCardio = true }

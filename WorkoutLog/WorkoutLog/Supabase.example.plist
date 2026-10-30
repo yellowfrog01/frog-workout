@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- 이 파일을 Supabase.plist 로 복사하고 프로젝트 값을 넣는다 (Supabase.plist 는 git 에 올리지 않는다) -->
+<plist version="1.0">
+<dict>
+	<key>URL</key>
+	<string>https://YOUR-PROJECT-REF.supabase.co</string>
+	<key>AnonKey</key>
+	<string>YOUR-ANON-KEY</string>
+</dict>
+</plist>

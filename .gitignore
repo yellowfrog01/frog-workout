@@ -12,3 +12,6 @@ deploy.env
 
 # 잡파일
 WorkoutLog/-
+
+# Supabase 프로젝트 값 (Supabase.example.plist 참고)
+WorkoutLog/WorkoutLog/Supabase.plist

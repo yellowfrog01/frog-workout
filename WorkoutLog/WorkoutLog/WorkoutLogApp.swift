@@ -10,6 +10,7 @@ struct WorkoutLogApp: App {
         WatchLink.shared.recordsProvider = Self.makeRecordsProvider(container)
         StrengthLive.install()
         StrengthLive.sync(StrengthDraftStore.shared.draft)
+        SyncService.shared.start(container: container)
     }
 
     /// 워치 기록 화면용 요약. 워치는 SwiftData 저장소를 못 보므로 아이폰이 만들어 보낸다.
